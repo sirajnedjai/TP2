@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+	int M[20][20],N,i,j,c,k;
+	do{
+	printf("donner N = ");
+	scanf("%d",&N);
+	}while((N<=0)||(N>20));
+	c = 1;
+	for(k=0;k<N;k++){
+		for(j=k;j<N;j++)
+		M[k][j]=c++;
+		for(i=k+1;i<N;i++)
+		M[i][k]=c++;
+	}
+	for(i=0;i<N;i++){
+		for(j=0;j<N;j++)
+		printf("%d \t",M[i][j]);
+		printf("\n");
+	}
+	return 0;
+}
